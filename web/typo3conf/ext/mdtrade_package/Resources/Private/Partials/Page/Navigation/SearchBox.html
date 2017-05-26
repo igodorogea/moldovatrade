@@ -1,0 +1,14 @@
+<form role="form" class="form-inline search-form" id="indexedsearch" method="post" action="#">
+	<input type="hidden" value="0" name="tx_indexedsearch[sections]" />
+	<input type="hidden" value="{f:translate(key:'LLL:EXT:lang/locallang_common.xlf:LGL.search', default: 'Search')}" name="tx_indexedsearch[submit_button]" />
+
+	<div class="input-group">
+		<input type="text" placeholder="Search" class="form-control searchbox-sword" value="" name="tx_indexedsearch[sword]">
+		<span class="input-group-btn">
+			<button class="btn btn-primary" type="submit">
+				<span class="glyphicon glyphicon-search"></span>
+				<span class="sr-only">{f:translate(key:'LLL:EXT:lang/locallang_common.xlf:LGL.search', default: 'Search')}</span>
+			</button>
+		</span>
+	</div>
+</form>

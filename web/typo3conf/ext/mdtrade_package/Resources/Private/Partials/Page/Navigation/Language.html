@@ -1,0 +1,35 @@
+{namespace bk2k = BK2K\BootstrapPackage\ViewHelpers}
+<f:if condition="{languagenavigation}">
+    <ul id="language_menu" class="language-menu">
+        <f:for each="{languagenavigation}" as="item">
+            <li class="{f:if(condition: item.active, then: 'active')} {f:if(condition: item.available, else: 'text-muted')}">
+                <f:switch expression="{item.languageUid}">
+                    <f:case value="2">
+                        <bk2k:var name="languageTitle" value="Русский" />
+                        <bk2k:var name="hreflang" value="ru-RU" />
+                    </f:case>
+                    <f:case value="1">
+                        <bk2k:var name="languageTitle" value="Română" />
+                        <bk2k:var name="hreflang" value="ro-RO" />
+                    </f:case>
+                    <f:case default="TRUE">
+                        <bk2k:var name="languageTitle" value="English" />
+                        <bk2k:var name="hreflang" value="en-GB" />
+                    </f:case>
+                </f:switch>
+                <bk2k:var name="elemHtml">
+                    <span class="hidden-xs">{languageTitle}</span>
+                    <span class="visible-xs-inline">{languageTitle -> f:format.crop(maxCharacters: 2, append: '')}</span>
+                </bk2k:var>
+                <f:if condition="{item.available}">
+                    <f:then>
+                        <a href="{item.link}" hreflang="{hreflang}" title="{languageTitle}">{elemHtml->f:format.htmlentitiesDecode()}</a>
+                    </f:then>
+                    <f:else>
+                        {elemHtml->f:format.htmlentitiesDecode()}
+                    </f:else>
+                </f:if>
+            </li>
+        </f:for>
+    </ul>
+</f:if>

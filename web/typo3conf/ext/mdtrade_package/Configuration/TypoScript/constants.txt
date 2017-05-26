@@ -1,0 +1,57 @@
+## PAGE
+page {
+    fluidtemplate {
+        # cat=mdtrade package: advanced/100/100; type=string; label=Layout Root Path: Path to layouts
+        layoutRootPath = EXT:mdtrade_package/Resources/Private/Layouts/Page/
+        # cat=mdtrade package: advanced/100/110; type=string; label=Partial Root Path: Path to partials
+        partialRootPath = EXT:mdtrade_package/Resources/Private/Partials/Page/
+        # cat=mdtrade package: advanced/100/120; type=string; label=Template Root Path: Path to templates
+        templateRootPath = EXT:mdtrade_package/Resources/Private/Templates/Page/
+    }
+}
+
+config {
+	compressCss = 0
+	concatenateCss = 0
+	admPanel = 0
+	compressJs = 0
+	concatenateJs = 0
+}
+
+plugin.bootstrap_package.settings.less {
+	brand-primary = #b78517
+	navbar-height = 60px
+	font-family-sans-serif = "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
+	font-family-base = @font-family-sans-serif
+	font-size-base = 14px
+	headings-font-family = "Roboto Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif
+	headings-color = @brand-primary
+#		headings-color = #c62828
+	headings-small-color = #ff5252
+	headings-font-weight = 500
+    font-size-large = ceil((@font-size-base * 1.25))
+    font-size-small = ceil((@font-size-base * 0.85))
+}
+plugin.bootstrap_package_contentelements {
+    view {
+        # cat=bootstrap package: advanced/140/partialRootPath; type=string; label=Partial Root Path: Path to partials
+        partialRootPath = EXT:mdtrade_package/Resources/Private/Partials/ContentElements/
+    }
+}
+page {
+	logo {
+		file = EXT:mdtrade_package/Resources/Public/Images/logo.png
+		fileInverted = EXT:mdtrade_package/Resources/Public/Images/logo.png
+		width = 504
+		height = 55
+	}
+
+	theme {
+		news.list.maxWInText = 0
+
+		meta.enable = 0
+		language.enable = 0
+		
+		copyright.text = © 2017 Moldova Trade. All Rights Reserved.
+	}
+}

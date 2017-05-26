@@ -1,0 +1,4 @@
+########################
+#### BACKENDLAYOUTS ####
+########################
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:mdtrade_package/Configuration/PageTS/Mod/WebLayout/BackendLayouts" extensions="txt">

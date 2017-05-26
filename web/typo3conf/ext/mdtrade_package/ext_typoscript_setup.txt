@@ -1,0 +1,6 @@
+config.tx_extbase {
+    objects {
+        # prevent extension list to be sorted alphabetically, and sort it by utility
+        TYPO3\CMS\Extensionmanager\Controller\ListController.className = IvanG\MdtradePackage\Controller\ListController
+    }
+}

@@ -1,0 +1,32 @@
+//
+// Sidebar
+// -------------------------
+.nav {
+	&.nav-sidebar {
+		font-size: @font-size-base;
+		li {
+			a {
+				padding: 8px 5px 7px;
+				border: none;
+				border-bottom: 1px solid darken(@body-bg, 10%);
+				color: lighten(@text-color, 30%);
+				&:active,
+				&:hover,
+				&:focus {
+					background-color: inherit;
+					color: @link-hover-color;
+				}
+			}
+			&.active > a {
+				color: @link-color;
+				border-bottom-color: #c5cae9;
+				&:active,
+				&:hover,
+				&:focus {
+					border-bottom-color: #9fa8da;
+					color: darken(@link-color, 5%);
+				}
+			}
+		}
+	}
+}

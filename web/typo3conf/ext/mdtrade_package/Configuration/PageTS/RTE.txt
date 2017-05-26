@@ -1,0 +1,12 @@
+################################################
+#### RTE APPEARANCE                         ####
+################################################
+RTE.default {
+	// Make the RTE bigger
+	RTEHeightOverride = 450
+}
+
+################################################
+#### USE PROCESSING RULES IN FRONTEND       ####
+################################################
+RTE.default.FE < RTE.default

@@ -1,0 +1,74 @@
+{
+  "name": "ivang/mdtrade-package",
+  "type": "typo3-cms-extension",
+  "description": "Distribution package for Moldova Trade website",
+  "keywords": [
+    "TYPO3 CMS",
+    "sitepackage",
+    "bootstrap",
+    "responsive",
+    "front-end",
+    "web"
+  ],
+  "homepage": "https://github.com/igodorogea/mdtrade_package",
+  "authors": [
+    {
+      "name": "Ivan Godorogea",
+      "email": "igodorogea@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "license": "MIT",
+  "support": {
+    "issues": "https://github.com/igodorogea/mdtrade_package/issues"
+  },
+  "require": {
+    "php": ">=7.1.0",
+    "typo3/cms-core": ">=8.5.1,<8.6.99",
+		"bk2k/bootstrap-package": "^7.1",
+		"dmitryd/typo3-realurl": "^2.1",
+		"aoepeople/crawler": "^5.2",
+		"typo3-ter/news": "^5.3"
+  },
+  "require-dev": {
+    "namelesscoder/typo3-repository-client": "^1.2",
+    "mikey179/vfsStream": "^1.4",
+    "phpunit/phpunit": "^6.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "IvanG\\MdtradePackage\\": "Classes"
+    }
+  },
+ "autoload-dev": {
+    "psr-4": {
+      "Igodorgea\\MdtradePackage\\Tests\\": "Tests",
+      "TYPO3\\CMS\\Core\\Tests\\": ".build/vendor/typo3/cms/typo3/sysext/core/Tests/",
+      "TYPO3\\CMS\\Fluid\\Tests\\": ".build/vendor/typo3/cms/typo3/sysext/fluid/Tests/"
+    }
+  },
+ "replace": {
+    "mdtrade_package": "self.version",
+    "typo3-ter/mdtrade-package": "self.version"
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "vendor-dir": ".build/vendor",
+    "bin-dir": ".build/bin",
+    "preferred-install": {
+      "typo3/cms": "source"
+    }
+  },
+  "scripts": {
+    "post-autoload-dump": [
+      "mkdir -p .build/web/typo3conf/ext/",
+      "[ -L .build/web/typo3conf/ext/mdtrade_package ] || ln -snvf ../../../../. .build/web/typo3conf/ext/mdtrade_package"
+    ]
+  },
+  "extra": {
+    "typo3/cms": {
+      "cms-package-dir": "{$vendor-dir}/typo3/cms",
+      "web-dir": ".build/web"
+    }
+  }
+}

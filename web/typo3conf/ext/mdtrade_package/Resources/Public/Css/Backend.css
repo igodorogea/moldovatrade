@@ -1,0 +1,62 @@
+/* Content */
+td.t3-page-column-0 {
+    background-color: #f2c836;
+}
+
+td.t3-page-column-2 {
+    background-color: #f2c836;
+}
+
+/* Header  */
+td.t3-page-column-1 {
+    background-color: #a65695;
+}
+
+/* Teaser */
+td.t3-page-column-3 {
+    background-color: #95c11f;
+}
+
+.content-container-ce + .grid-visibility-toggle .fce-header {
+    display: none;
+}
+
+
+.muume-template.fce-content-container .bg-color-preview .btn-primary,
+.muume-template.fce-content-container .bg-primary {
+    background-color: #f58229;
+}
+
+.muume-template.fce-content-container .bg-secondary,
+.muume-template.fce-content-container .bg-color-preview .btn-warning,
+.muume-template.fce-content-container .bg-color-preview .btn-secondary,
+.muume-template.fce-content-container .bg-color-preview .bg-secondary {
+    background-color: #49504f;
+}
+
+.muume-template.fce-content-container hr {
+    border-top: 1px solid #7a7a7a;
+    margin: 5px 0 10px;
+}
+
+.fce-content-container .bg-color-preview > div,
+.fce-content-container .bg-image-preview > div {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.fce-content-container .bg-color-preview > .bg-label,
+.fce-content-container .bg-image-preview > .bg-label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.fce-content-container .bg-color-preview > .bg-block {
+    width: 40px;
+    height: 40px;
+}
+
+.lead {
+    margin-bottom: 5px;
+    font-size: 13px;
+}

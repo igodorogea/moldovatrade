@@ -1,0 +1,39 @@
+{
+	"repositories": [{
+		"type": "composer",
+		"url": "https://composer.typo3.org/"
+	}],
+	"name": "typo3/cms-base-distribution",
+	"description": "Moldova Trade Website Base Distribution",
+	"license": "GPL-2.0+",
+	"require": {
+		"typo3/cms": "^8.7",
+		"bk2k/bootstrap-package": "^8.0",
+		"helhum/typo3-console": "^4.4",
+		"dmitryd/typo3-realurl": "^2.2",
+		"aoepeople/crawler": "dev-master",
+		"typo3-ter/news": "^5.3",
+		"typo3-ter/gravatar": "^1.0",
+		"typo3-ter/unroll": "^2.0"
+	},
+	"extra": {
+		"typo3/cms": {
+			"cms-package-dir": "{$vendor-dir}/typo3/cms",
+			"web-dir": "web"
+		},
+		"helhum/typo3-console": {
+			"install-extension-dummy": false
+		}
+	},
+	"scripts":{
+		"typo3-cms-scripts": [
+			"typo3cms install:fixfolderstructure"
+		],
+		"post-install-cmd": [
+			"@typo3-cms-scripts"
+		],
+		"post-update-cmd": [
+			"@typo3-cms-scripts"
+		]
+	}
+}
